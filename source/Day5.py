@@ -79,12 +79,13 @@ def mapValues(seeds,mappings):
         print(index[i+1],"-",mappings[i],'*****')
         for seed in seeds:
             seed[index[i+1]]=mapNewValue(seed[index[i]],mp)
+            print(seed)
     return seeds
         
 
-fileSample=os.path.join("/home/serve/Downloads","day5example.txt")
+fileSample=os.path.join("/home/serve/Python/Advent2023/data","day5example.txt")
 file=os.path.join("/home/serve/Downloads","inputday5.txt")
-runData=openfile(file)
+runData=openfile(fileSample)
 
 seeds=createSeeds(runData)
 mappings=getMappings(runData)
